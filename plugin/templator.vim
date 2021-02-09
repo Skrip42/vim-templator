@@ -8,8 +8,8 @@ if has('win32') || has ('win64')
 else
     let $VIMHOME = $HOME."/.vim"
 endif
-if !exists('g:templator_ingnore_priority')
-    let g:templator_ingnore_priority = 0
+if !exists('g:templator_ignore_priority')
+    let g:templator_ignore_priority = 0
 endif
 if !exists('g:templator_config_dir')
     let g:templator_config_dir = $VIMHOME . '/template.json'

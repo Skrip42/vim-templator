@@ -28,7 +28,7 @@ def searchTemplate():
     if len(mathedTemplates) == 0:
         return
 
-    if int(vim.eval('g:templator_ingnore_priority')) == 0:
+    if int(vim.eval('g:templator_ignore_priority')) == 0:
         maxPriority = mathedTemplates[0]['priority']
         mathedTemplates = list(filter(lambda t: t['priority'] == maxPriority, mathedTemplates))
 
