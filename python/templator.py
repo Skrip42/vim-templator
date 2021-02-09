@@ -20,9 +20,10 @@ def appendTemplate():
 def searchTemplate():
     global config
 
-    filePath = vim.eval('expand("%")')
+    filePath = vim.eval('expand("%:p")')
     fileName    = filePath.split('/').pop()
     fileFormat  = fileName.split('.', 1).pop()
+    print(filePath)
     mathedTemplates = list(filter(lambda t: t['pattern'].search(filePath) != None, config))
 
     if len(mathedTemplates) == 0:
