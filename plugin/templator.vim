@@ -17,6 +17,8 @@ endif
 
 if !exists('g:templator_autotemplate') || g:templator_autotemplate
     autocmd BufRead * if getfsize(expand('%'))==0 |call TemplatorTemplate()|endif
+    autocmd BufNewFile * call TemplatorTemplate()
+    " autocmd BufEnter * if getfsize(expand('%'))==0 |call TemplatorTemplate()|endif
 endif
 
 python3 << EOF
